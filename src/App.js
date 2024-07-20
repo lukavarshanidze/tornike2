@@ -5,6 +5,7 @@ import bg from './assets/bg.jpeg'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Agordzineba from "./pages/Agordzineba";
 import About from "./pages/About";
+import { Contact } from "./pages/Contact";
 
 
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/ერის-აღორძინება" element={<Agordzineba />}/>
           <Route path="/ჩვენ-შესახებ" element={<About />}/>
+          <Route path="/კონტაქტი" element={<Contact />}/>
         </Routes>
         {/* <img src={bg}/> */}
         <></>

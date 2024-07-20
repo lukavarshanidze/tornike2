@@ -1,0 +1,29 @@
+.container {
+width: 60%;
+margin: 0 auto;
+margin-top: 140px;
+}
+
+.contact {
+
+}
+
+.contact h3{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.contact a {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    text-decoration: underline;
+    color: black;
+    display: flex;
+}
+
+.contact .meet {
+    margin-top: 20px;
+    color: red;
+    font-size: 20px;
+}
