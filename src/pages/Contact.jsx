@@ -3,6 +3,12 @@ import styles from "../styles/Contact.module.scss";
 export const Contact = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.address}>
+        <h3>მისამართი:</h3>
+        <p>0186 თბილისი, ოთარ ლორთქიფანიძის #1</p>
+      </div>
+
+
       <div className={styles.contact}>
         <h3>კონტაქტი:</h3>
         <a href={`tel:+995 574 52 43 34`}>+995 574 52 43 34</a>
