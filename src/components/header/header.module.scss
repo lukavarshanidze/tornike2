@@ -20,6 +20,12 @@
     color: black;
 }
 
+.navigation .clicked a {
+    color: #9A0101;
+    text-decoration: underline;
+
+  }
+
 .navigation ul li a:hover{
  color: #9A0101
 }

@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
 import styles from "./header.module.scss";
+import { useState } from "react";
 
 function Header() {
+  const [activeItem, setActiveItem] = useState("/");
+
+  const handleClick = (path) => {
+    setActiveItem(path);
+  };
+
   return (
     <div>
       <div className={styles.main__header}>
@@ -10,20 +17,38 @@ function Header() {
 
       <nav className={styles.navigation}>
         <ul>
-          <li className={styles.clicked}>
-            <Link to="/">მთავარი</Link>
+          <li className={activeItem === "/" ? styles.clicked : ""}>
+            <Link to="/" onClick={() => handleClick("/")}>
+              მთავარი
+            </Link>
           </li>
-          <li>
-            <Link to="სიახლეები">სიახლეები</Link>
+          <li className={activeItem === "/სიახლეები" ? styles.clicked : ""}>
+            <Link to="/სიახლეები" onClick={() => handleClick("/სიახლეები")}>
+              სიახლეები
+            </Link>
           </li>
-          <li>
-            <Link to="ერის-აღორძინება">ერის აღორძინება</Link>
+          <li
+            className={activeItem === "/ერის-აღორძინება" ? styles.clicked : ""}
+          >
+            <Link
+              to="/ერის-აღორძინება"
+              onClick={() => handleClick("/ერის-აღორძინება")}
+            >
+              ერის აღორძინება
+            </Link>
           </li>
-          <li>
-            <Link to="ჩვენ-შესახებ">ჩვენ შესახებ</Link>
+          <li className={activeItem === "/ჩვენ-შესახებ" ? styles.clicked : ""}>
+            <Link
+              to="/ჩვენ-შესახებ"
+              onClick={() => handleClick("/ჩვენ-შესახებ")}
+            >
+              ჩვენ შესახებ
+            </Link>
           </li>
-          <li>
-            <Link to="კონტაქტი">კონტაქტი</Link>
+          <li className={activeItem === "/კონტაქტი" ? styles.clicked : ""}>
+            <Link to="/კონტაქტი" onClick={() => handleClick("/კონტაქტი")}>
+              კონტაქტი
+            </Link>
           </li>
         </ul>
       </nav>
