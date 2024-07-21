@@ -15,9 +15,9 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/ერის-აღორძინება" element={<Agordzineba />}/>
-          <Route path="/ჩვენ-შესახებ" element={<About />}/>
-          <Route path="/კონტაქტი" element={<Contact />}/>
+          <Route path="/eris-agordzineba" element={<Agordzineba />}/>
+          <Route path="/chven-shesaxeb" element={<About />}/>
+          <Route path="/kontaqti" element={<Contact />}/>
         </Routes>
         {/* <img src={bg}/> */}
         <></>

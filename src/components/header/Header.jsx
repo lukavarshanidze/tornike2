@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 import styles from "./header.module.scss";
 import { useState } from "react";
+import { useLocation } from 'react-router-dom';
+
 
 function Header() {
-  const [activeItem, setActiveItem] = useState("/");
-
+  
   const handleClick = (path) => {
     setActiveItem(path);
   };
+  
+  const location = useLocation();
+  const [activeItem, setActiveItem] = useState(location.pathname);
 
   return (
     <div>
@@ -22,31 +26,31 @@ function Header() {
               მთავარი
             </Link>
           </li>
-          <li className={activeItem === "/სიახლეები" ? styles.clicked : ""}>
-            <Link to="/სიახლეები" onClick={() => handleClick("/სიახლეები")}>
+          <li className={activeItem === "/siaxleebi" ? styles.clicked : ""}>
+            <Link to="/siaxleebi" onClick={() => handleClick("/siaxleebi")}>
               სიახლეები
             </Link>
           </li>
           <li
-            className={activeItem === "/ერის-აღორძინება" ? styles.clicked : ""}
+            className={activeItem === "/eris-agordzineba" ? styles.clicked : ""}
           >
             <Link
-              to="/ერის-აღორძინება"
-              onClick={() => handleClick("/ერის-აღორძინება")}
+              to="/eris-agordzineba"
+              onClick={() => handleClick("/eris-agordzineba")}
             >
               ერის აღორძინება
             </Link>
           </li>
-          <li className={activeItem === "/ჩვენ-შესახებ" ? styles.clicked : ""}>
+          <li className={activeItem === "/chven-shesaxeb" ? styles.clicked : ""}>
             <Link
-              to="/ჩვენ-შესახებ"
-              onClick={() => handleClick("/ჩვენ-შესახებ")}
+              to="/chven-shesaxeb"
+              onClick={() => handleClick("/chven-shesaxeb")}
             >
               ჩვენ შესახებ
             </Link>
           </li>
-          <li className={activeItem === "/კონტაქტი" ? styles.clicked : ""}>
-            <Link to="/კონტაქტი" onClick={() => handleClick("/კონტაქტი")}>
+          <li className={activeItem === "/kontaqti" ? styles.clicked : ""}>
+            <Link to="/kontaqti" onClick={() => handleClick("/kontaqti")}>
               კონტაქტი
             </Link>
           </li>
